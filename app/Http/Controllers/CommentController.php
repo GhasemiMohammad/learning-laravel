@@ -15,7 +15,8 @@ class CommentController extends Controller
      */
     public function index()
     {
-        //
+        $comments = Comment::find(4);
+        dd($comments->user->email);
     }
 
     /**
