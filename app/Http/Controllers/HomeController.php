@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Address;
 use App\Models\Country;
 use App\Models\User;
+use App\Models\Post;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -17,8 +19,15 @@ class HomeController extends Controller
 //        dd($address->user->name);
 //          $user = User::find(38);
 //          dd($user->info);
-        $country = Country::find(2);
-        dd($country->posts);
-//        return view('welcome');
+//        $country = Country::find(2);
+//        dd($country->posts);
+
+//        *** Many To Many relations ***
+
+//        $post= Post::find(1);
+//        dd($post->tags);
+//        $tag = Tag::find(1);
+//        dd($tag->posts);
+
     }
 }

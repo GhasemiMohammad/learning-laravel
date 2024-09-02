@@ -7,6 +7,7 @@ use App\Models\Comment;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Address;
+use App\Models\Post;
 class DatabaseSeeder extends Seeder
 {
     /**
