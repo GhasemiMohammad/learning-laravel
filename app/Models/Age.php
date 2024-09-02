@@ -5,11 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Car extends Model
+class Age extends Model
 {
     use HasFactory;
-    public function ages()
+
+    public function ageable()
     {
-        return $this->morphMany(Age::class,'ageable');
+        return $this->morphTo();
     }
 }

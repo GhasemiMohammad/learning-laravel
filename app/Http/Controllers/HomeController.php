@@ -8,6 +8,8 @@ use App\Models\User;
 use App\Models\Post;
 use App\Models\Tag;
 use App\Models\Image;
+use App\Models\Car;
+use App\Models\Age;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -33,8 +35,16 @@ class HomeController extends Controller
 ////      *** one to one polymorphic
 //        $user = User::find(2);
 //        dd($user->image);
-        $images = Image::find(1);
-        dd($images->imageable->name);
+//        $images = Image::find(1);
+//        dd($images->imageable->name);
+
+//        *** one to many polymorphic
+//        $user = USer::find(2);
+//        dd($user->ages);
+//          $car = Car::find(3);
+//          dd($car->ages);
+        $age = age::find(1);
+        dd($age->ageable);
     }
 
 }

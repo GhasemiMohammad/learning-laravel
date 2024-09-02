@@ -38,6 +38,11 @@ class User extends Authenticatable
     {
         return $this->morphOne(Image::class,'imageable');
     }
+
+    public function ages()
+    {
+        return $this->morphMany(Age::class,'ageable');
+    }
     /**
      * The attributes that should be hidden for serialization.
      *
