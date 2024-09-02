@@ -33,6 +33,11 @@ class User extends Authenticatable
     {
         return $this->hasOneThrough(Information::class,Car::class);
     }
+
+    public function image()
+    {
+        return $this->morphOne(Image::class,'imageable');
+    }
     /**
      * The attributes that should be hidden for serialization.
      *

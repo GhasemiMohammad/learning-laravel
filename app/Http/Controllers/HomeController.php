@@ -7,6 +7,7 @@ use App\Models\Country;
 use App\Models\User;
 use App\Models\Post;
 use App\Models\Tag;
+use App\Models\Image;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -29,5 +30,11 @@ class HomeController extends Controller
 //        $tag = Tag::find(1);
 //        dd($tag->posts);
 
+////      *** one to one polymorphic
+//        $user = User::find(2);
+//        dd($user->image);
+        $images = Image::find(1);
+        dd($images->imageable->name);
     }
+
 }
