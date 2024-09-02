@@ -43,8 +43,23 @@ class HomeController extends Controller
 //        dd($user->ages);
 //          $car = Car::find(3);
 //          dd($car->ages);
-        $age = age::find(1);
-        dd($age->ageable);
+//        $age = age::find(1);
+//        dd($age->ageable);
+
+//        *** insert to table ***
+//        $user = User::find(10);
+//        $age = new Age;
+//        $age->birthday = '1390';
+//        $user->ages()->save($age);
+
+//        *** many to many polymorphic
+
+//        $post=Post::find(18);
+//        dd($post->tags);
+
+        $tag = Tag::find(3);
+        dd($tag->posts);
+
     }
 
 }

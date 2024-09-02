@@ -19,12 +19,17 @@ class Post extends Model
         return $this->hasMany(Comment::class);
     }
 
-    public function tags()
-    {
-        return $this->belongsToMany(Tag::class);
-    }
+//    public function tags()
+//    {
+//        return $this->belongsToMany(Tag::class);
+//    }
     public function image()
     {
         return $this->morphOne(Image::class,'imageable');
+    }
+
+    public function tags()
+    {
+        return $this->morphToMany(Tag::class,'taggable');
     }
 }
