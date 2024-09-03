@@ -14,10 +14,7 @@ class Post extends Model
         'user_id'
     ];
 
-    public function comments()
-    {
-        return $this->hasMany(Comment::class);
-    }
+
 
 //    public function tags()
 //    {
@@ -31,5 +28,13 @@ class Post extends Model
     public function tags()
     {
         return $this->morphToMany(Tag::class,'taggable');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+    public function user(){
+        return $this->belongsTo(User::class);
     }
 }

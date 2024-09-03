@@ -34,6 +34,10 @@ class User extends Authenticatable
         return $this->hasOneThrough(Information::class,Car::class);
     }
 
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
     public function image()
     {
         return $this->morphOne(Image::class,'imageable');
