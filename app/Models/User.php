@@ -19,7 +19,8 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
         'email',
         'password',
     ];
@@ -47,11 +48,10 @@ class User extends Authenticatable
     {
         return $this->morphMany(Age::class,'ageable');
     }
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
+
+    public function getFullNameAttribute(){
+        return $this->first_name . ' ' . $this->last_name;
+    }
     protected $hidden = [
         'password',
         'remember_token',
